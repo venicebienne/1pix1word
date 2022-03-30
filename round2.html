@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <title>4 PIX 1 WORD: Round 2</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Red+Hat+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+        
+        <style>
+             body {
+                background-color: #F4EDE7;
+                width: 100%;
+            }
+            
+            header{
+                background-color: #586F6B; 
+                text-align: center; 
+                width:100%; 
+            }    
+            
+            .nav-list {
+                list-style-type: none;
+                margin: 0;
+                padding: 0px;
+                background-color: #45503B;
+                position: fixed;
+                text-align: center; 
+                width: 100%;
+            }
+
+            .nav-icons:hover {
+                background-color: #FFBD59;
+            }
+
+            .nav-icons {
+                float: right;
+                padding: 10px;
+            }
+            
+            .container {
+                align-content: center;
+                text-align: center;
+                padding-top: 150px;
+                padding-bottom: 30px;
+                padding-left: 35px;
+                padding-right: 35px;
+            }
+            
+            .game_title {
+                width: 150px;
+                float: left;  
+                padding-left: 20px;
+            }
+            
+            h1 {
+                font-family: 'Red Hat Mono', monospace;
+                font-size: 17px;
+                margin: 0px;
+                padding: 25px;
+                background-color: #7F9183;
+                text-align: justify;
+                line-height: inherit;
+            }
+            
+            h2 {
+                font-family: 'Press Start 2P', serif;
+                font-size: 26px; 
+                padding-top: 45px;
+                padding-bottom: 10px;
+                padding-left: 0px;
+            }
+            
+            .pics {
+                width: 270px;
+                height: 270px;
+                margin: 20px;
+                border-radius: 15px;
+            }
+
+            .letters {
+                width: 60px;
+                height: 60px;
+                
+            }
+            
+            #div1, #div2, #div3, #div4, #div5, #div6 {
+                width: 80px;
+                height: 80px;
+                border-style: solid;
+                border-width: 3px;
+                padding: 7px;
+                border-radius: 10px;
+                border-spacing: 10px;
+                float: left;
+                background-color: #FFBD59;
+                border-color: #FFBD59;
+                margin: 10px;
+            }
+            
+            .word_letters {
+                margin-top: 120px;
+                margin-left: 270px;
+                margin-right: 270px;
+                margin-bottom: 120px;
+                
+            }
+            
+            .enter {
+                width: 160px;
+                height: 60px;
+                border-style: solid;
+                border-width: 3px;
+                border-radius: 10px;
+                border-spacing: 10px;
+                float: left;
+                background-color: #586F6B;
+                border-color: #586F6B;
+                margin-left: 60px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-family: 'Press Start 2P', serif;
+                font-size: 25px;
+                color: #FFBD59;
+                padding-left: 4.5px;
+                padding-right: 3px;
+            }
+            
+            .enter:hover {
+                background-color: #B8B8AA;
+                color: black;
+                border-color: #B8B8AA;
+            }
+            
+        </style>
+        
+        <script>
+            var userAnswer = "";
+            
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+                userAnswer += data; // in this case, the variable data contains the ID of the entered variable
+            }
+
+            function enter() {
+                console.log(userAnswer);
+                if (userAnswer == "ATT2A2CK") {
+                    
+                    if (userAnswer == "ATT2A2CK") {
+                        alert("Correct! You can now proceed to the next round!");
+                        location.replace("round3.html");
+                    }
+                }
+                
+                else if (userAnswer == "AT2TA2CK") {
+                    
+                    if (userAnswer == "AT2TA2CK") {
+                        alert("Correct! You can now proceed to the next round!");
+                        location.replace("round3.html");
+                    }
+                }
+                
+                else if (userAnswer == "A2TT2ACK") {
+                    
+                    if (userAnswer == "A2TT2ACK") {
+                        alert("Correct! You can now proceed to the next round!");
+                        location.replace("round3.html");
+                    }
+                }
+                
+                else if (userAnswer == "A2T2TACK") {
+                    
+                    if (userAnswer == "A2T2TACK") {
+                        alert("Correct! You can now proceed to the next round!");
+                        location.replace("round3.html");
+                    }
+                }
+                
+                else {
+                    alert("Try again");
+                    location.reload();
+                }
+            }
+            
+            </script>
+        
+            </head>
+            
+            <body>
+                <header>
+                    <div class="header">
+                        <nav>
+                            <ul class="nav-list">
+                                <li><img class="game_title" src="https://lh3.googleusercontent.com/aghhtDVMerBy9guruHX_M8CIz47cAV-K01JckBbGKA8QRynSQ4_6rNoOEBveLwZ0X5O0KEu6EmHi3MUB0eTJ0z9ieGdGGI7E85PGeVh-0oQ1mcd7TFZ2xf1Sshek1HzUdKQRGo_fLQ" alt="4 PIX 1 WORD Logo"></li>
+                                <li><a class="nav-icons" href="developerspage.html"><img src="https://lh3.googleusercontent.com/0LJc8_CWnQ9IyKnsbTrUkCIH-bw3qTUwucgesgF8w2ul3C3Y53xNUkHjQo4YI8zPEWJV_BnVdz-pVo5j4HqI6vXG41Es2SP7z2I1eefIVMgL6gcoeMPGTYGXieWRuULa6IQa1DW9ig=w50" alt="Developers Page Button"></a></li>
+                                <li><a class="nav-icons" href="cheatsheet.html"><img src="https://lh3.googleusercontent.com/EXn1Mr_ldDsbuWYe4fceyenoi5CoLKcvtDcmZqnSiIsMiGd9qPJP3PYZ3d8VrCFk_LRG_0j7pHs_C3Wiem1B7JJp9cqeUrImPcqMtdqAC1CkNMEIhW-gD7VYplc2zCrCT24YpM7ozw=w50" alt="Cheat Sheet Button"></a></li>
+                                <li><a class="nav-icons" href="instructions.html"><img src="https://lh3.googleusercontent.com/Ls-maC1_PThQ6XvbTS-0eSVwhdA2cMcphftKFiYfhnlOsX9QnYgH3B5eskznL3fQTWDUal6xUsBz82yChRt6EB6JagklC1yQv2ga_Sa7Kr4qyk9xJnHCS1ARedyBuBlGsfAjIFRTKQ=w50" alt="Instructions Button"></a></li>
+                                <li><a class="nav-icons" href="index.html"><img src="https://lh3.googleusercontent.com/1A1hb6ygTd2awVjjJhFFor3yNJinYNomfuB7aaHsk4iW_Td9jIMbHdoZ7szyhHeirvEtaFzG1ukSzgp-5kB6mVRfPbcnyxD5FguX1pSJup9VVzcJgZKAmLUKCgBMn4ySO2reZukUbw=w50" alt="Home Button"></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="pics" src="https://lh3.googleusercontent.com/cZSABVZI_bJIiRUWvN3RDhnI8BBF5AwBDa5v8u9tBnL7GGNOpi11MH8NZiWbWUlvt8e_hw6Pv8bH3I-hJ7hx4fQ3xcdygK0uZamYy0Ns0tB2ZXUleej4RDO1zX8vOhlpDwRe7TAJYg" alt="Movie Scene Involving a Man">
+                            </td>
+                            <td>
+                                <img class="pics" src="https://lh3.googleusercontent.com/HHFvKuHzm_t8ij3WPaEz0x7AImCOyjRBcHIcBNjitlAxtgv2nGjOjrZz9xgzt0C08jROrMxz8o6_S7NU9ZO6NHCPXxmyAnZD6FQAsaBkQnK8NRKMsel5jwEDA5lLZzlAY5wt0pX-3Q" alt="Soldiers">
+                            </td>
+                            <td>
+                                <img class="pics" src="https://lh3.googleusercontent.com/WPrW5FcLkwwEGk3yB5jjgM5p3lPlxX012BHtpc3H26tgDH6lLApqfVsNomfAOkeKkoln8WcfFsxMUW3LVFNdePp5VT0v9PI6NimnL-qTeVyILEUow2kkzwAamUT9F65M69zkPJev_w" alt="Weapons">
+                            </td>
+                            <td>
+                                <img class="pics" src="https://lh3.googleusercontent.com/U1_bKk5vLOReRzaSjmIqIeNiePabm6fhWu4326ytuG11NN5VOl_Bi7iFfllgoRQt4tDXAjCathDz5eXnUgrZJBC37WmIBpOir3YnNCIFTHpLuWaBetG2i0D120_8ifXnYOJUw6DE9A" alt="Bertholdt Hoover of Attack on Titan">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+               <div style="margin-left: 420px; float: none;">
+                        <div id="div1" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div2" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div3" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div4" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div5" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div6" class="dragdrop_boxes" ondrop="drop(event)" ondragover="allowDrop(event)"></div> 
+                        <button class="enter" id="Enter()" onclick="enter()">enter</button>
+                </div>
+                
+                <br>
+                
+                <div class="word_letters">
+                    <img id="A" class="letters" src="https://lh3.googleusercontent.com/YC2sLIgDgIRcDa0TSE3rxeF76YEOSS8RvSSIEGbugugfvJW4euUxp0dFZDfoRrsmQNl75CeGgWErloH6fY5GyMX-9PF1JWTQxy_8HlfmGlcmfkeNrQDdLqf2BKC_yGWLyl2cGPRuFg=w2400" draggable="true" ondragstart="drag(event)" alt="Letter A">
+                    <img id="C" class="letters" src="https://lh3.googleusercontent.com/-wYnjf-WbPZrNMIWyXDGeip9uBxe-dxZQbcv2FS7l-fVCeOhWhsh1vhjEM0KqzDVzcUSyQkt1wXbMkDJk6eiXs6WDzFA5s2X1-dw9Z3gIr4Ab3LKD-RTgTDjQPj7r_0I8IC9WJbWAA=w2400" draggable="true" ondragstart="drag(event)" alt="Letter C">
+                    <img id="H" class="letters" src="https://lh3.googleusercontent.com/MaRW915Frm_SP_v9sxm7nyg7tAEcYAsOnqV2K_3dmFJbQ0OfsSZXiQ9KT71tzSCYky4xFR5aKbnb_lq22MFKlE92eUkK2x2rzqEsJVrVYLWfQr9KG6HoWwVZPzgB-ypFLH-idVxgEQ=w2400" draggable="true" ondragstart="drag(event)" alt="Letter H">
+                    <img id="M" class="letters" src="https://lh3.googleusercontent.com/MfA20XjxBVthSwz2ezhepTA9bsGgdNNky0ufq5WI6f7DBiALbdFwRAMfQgviheYDTsEp3jX3IWhwc2oOEciUEB62P1hA_8LRkNMTAxMmyiDhpAgF7B1rMr7LcFqSHD_EX-Z0xuisXQ=w2400" draggable="true" ondragstart="drag(event)" alt="Letter M">
+                    <img id="O" class="letters" src="https://lh3.googleusercontent.com/DyCpEfzDNPQD0mxTgmpYWvtiR8eZ1-KSOe2CG3wk3373LLb-4E5cCtsk_k32JLLaDrEwqFhLMcOsxCLeteJ1ce1cD7cepzLivHGaXX-WfNYcws1hiC5Y3nXsoOmEvAdvl_l4EVB6ag=w2400" draggable="true" ondragstart="drag(event)" alt="Letter O">
+                    <img id="P" class="letters" src="https://lh3.googleusercontent.com/346CLJt6MJPKPF0maPwxWqbBEaLPatBHjaC_SiTiuaDDcaGx2wR4OX_tz2hApQ29sSbrCSzgQ5lO8NQPia42c2HThg6DtznJ2yo-cG1ywTgw3gy4rO0qaYb2dWeWakX6VGl4rzZLgg=w2400" draggable="true" ondragstart="drag(event)" alt="Letter P">
+                    <img id="Q" class="letters" src="https://lh3.googleusercontent.com/TeflPN2bOdv5lx87AAOyr6f2efeWKmBvUHFIv5IVqkreYgh_LJvyUHZ8VCB0AV7p1jtYU69gn-m8ZKn7jXNcXMikEwb3bkB4DZMQRLpWbToXPH4sUChu39apaKLcGt4NyAIb2g1rGA=w2400" draggable="true" ondragstart="drag(event)" alt="Letter Q">
+                    <img id="R" class="letters" src="https://lh3.googleusercontent.com/rFR8FqeIzy6EU0NyqzhvWnZmUUZcsP64glzDqNoPOhguJbCRGPD5IdLI_aSBXKnggy4WMU-tAEKGn5EpXoryh_7SCwS1uVbLJ4x7MGkHpecK355euC1JkENKmPhjSm522Xt6xdP-FQ=w2400" draggable="true" ondragstart="drag(event)" alt="Letter R">
+                    <img id="T" class="letters" src="https://lh3.googleusercontent.com/tFO8TvcAn5jaEGPFe_Qfm-2q0R0YWuk6jrmoJlGFM4Oi4KU2EbEkCyVtc9dyXYpR7bqti7TzmhNWWaDaIWsxcgXwEAnKCdb88F3576F04sUlLheBN1-1JXXGEchWmFBacVEoxfCYMA=w2400" draggable="true" ondragstart="drag(event)" alt="Letter T">
+                    <img id="Y" class="letters" src="https://lh3.googleusercontent.com/a8TIFjoMpAZMfH8w9f8gCC4G2cwTVovlZAVf5aUz8qGuMweK9xNtbJPfcCSIjbs3hkmsjM1RoLM_wR_EhUK9lyMUMMH432WSvfZRTaM3nk3XwoxmSqlClw7zHCWGYg42x8MKDvPUZw=w2400" draggable="true" ondragstart="drag(event)" alt="Letter Y">
+                    <img id="T2" class="letters" src="https://lh3.googleusercontent.com/tFO8TvcAn5jaEGPFe_Qfm-2q0R0YWuk6jrmoJlGFM4Oi4KU2EbEkCyVtc9dyXYpR7bqti7TzmhNWWaDaIWsxcgXwEAnKCdb88F3576F04sUlLheBN1-1JXXGEchWmFBacVEoxfCYMA=w2400" draggable="true" ondragstart="drag(event)" alt="Letter T">
+                    <img id="K" class="letters" src="https://lh3.googleusercontent.com/H48g0pJcNDUNHiFzyCfIPk0p1VRZlI0y1roZVcK7Wjg7mb5L_u-4eHr93M3FbMulOgIfMvdhkfNKYPeeccVRXjTV9_v5TZc00QKCs9MN7UAW8QxOUzN3XRkSODF8YK3aq1UXG_NphQ=w2400" draggable="true" ondragstart="drag(event)" alt="Letter K">
+                    <img id="A2" class="letters" src="https://lh3.googleusercontent.com/YC2sLIgDgIRcDa0TSE3rxeF76YEOSS8RvSSIEGbugugfvJW4euUxp0dFZDfoRrsmQNl75CeGgWErloH6fY5GyMX-9PF1JWTQxy_8HlfmGlcmfkeNrQDdLqf2BKC_yGWLyl2cGPRuFg=w2400" draggable="true" ondragstart="drag(event)" alt="Letter A">
+                    <img id="J" class="letters" src="https://lh3.googleusercontent.com/HY9PhHHCOAsHoorpSoELf_Rn4LCO9I9uIEgXOyQTpnOVdN2HVm0BYAqGzRSaSes2HXRurUlxzGTs3cvgLCvipRghZKNkj394VBK0Vi4ho7pLSN-X67RHpldyFRx79vGsuXgfVj_KAQ=w2400" draggable="true" ondragstart="drag(event)" alt="Letter J">
+                </div>
+
+
+
+    </body>
+</html>
